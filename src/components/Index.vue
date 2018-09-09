@@ -1,7 +1,6 @@
 <template>
   <el-container>
     <el-header>
-      <div>头部</div>
     </el-header>
     <el-container>
       <el-aside width="200px">
@@ -42,7 +41,6 @@ export default {
   },
   mounted () {
     let _this = this
-    console.log(this)
     let query = new _this.$query('eh_type')
     query.ascending('createdAt')
     query.find().then(function (results) {
@@ -54,7 +52,6 @@ export default {
         })
       }
     })
-
   }
 }
 </script>

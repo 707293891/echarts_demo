@@ -10,10 +10,6 @@ function install (Vue) {
    * 引入echarts
    */
   const echarts = require('echarts')
-  // 引入提示框和标题组件
- // require('echarts/lib/component/tooltip')
- // require('echarts/lib/component/title')
- // require('echarts/lib/component/legend')
   Vue.prototype.$echarts = echarts
 
   let reszieArray = []
