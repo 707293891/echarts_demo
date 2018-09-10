@@ -62,7 +62,7 @@
         </el-form-item>
       </el-form>
       <el-form :model="form" ref="form2" v-if="form.addType">
-        <el-form-item label="类型名称" :required="true"prop="typeName">
+        <el-form-item label="类型名称" :required="true" prop="typeName">
           <el-input v-model.trim="form.typeName" auto-complete="off" placeholder="如：饼图，柱状图，线型图"></el-input>
         </el-form-item>
         <el-form-item label="类型编码" :required="true" prop="type">
