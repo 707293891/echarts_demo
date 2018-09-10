@@ -7,12 +7,16 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
-      component: () => import('@/components/Index')
+      redirect: {
+        name: 'index'
+      },
+      params: {
+        type: 'line'
+      }
     },
     {
       path: '/:type',
-      name: 'Second',
+      name: 'index',
       component: () => import('@/components/Index')
     }
   ]

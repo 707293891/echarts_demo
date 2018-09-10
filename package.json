@@ -18,7 +18,8 @@
     "vue-router": "^3.0.1",
     "element-ui": "^2.4.6",
     "echarts": "^4.1.0",
-    "leancloud-storage": "^3.10.0"
+    "leancloud-storage": "^3.10.0",
+    "echarts-liquidfill": "^2.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

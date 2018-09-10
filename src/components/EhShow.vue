@@ -1,13 +1,13 @@
 <template>
-  <el-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 6}">
+  <el-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 6}" style="margin-bottom: 10px;">
     <div :id="id" class="eh_div">
     </div>
     <div class="control">
-        <el-tooltip content="编辑option">
-          <i class="el-icon-edit cursor" @click="handleClick"></i>
+        <el-tooltip content="查看id">
+          <i class="el-icon-edit cursor" @click="handleClick('id')"></i>
         </el-tooltip>
       <el-tooltip content="查看option">
-        <i class=" el-icon-view cursor" @click="handleClick"></i>
+        <i class=" el-icon-view cursor" @click="handleClick('option')"></i>
       </el-tooltip>
 
     </div>
@@ -23,10 +23,11 @@ export default {
     option: {type: Object, require: true}
   },
   methods: {
-    handleClick () {
+    handleClick (type) {
+      console.log(this)
       this.$msgbox({
-        title: 'option',
-        message: JSON.stringify(this.$options.propsData.option),
+        title: type,
+        message: type === 'id' ? this.$options.propsData.id: JSON.stringify(this.$options.propsData.option),
         customClass: 'optionClass'
       })
     }
@@ -55,6 +56,6 @@ export default {
     cursor: pointer;
   }
   .optionClass{
-    width: 90%;
+    width: 90% !important;
   }
 </style>
